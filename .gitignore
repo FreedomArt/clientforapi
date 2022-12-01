@@ -75,3 +75,5 @@ fabric.properties
 *.xml
 *.iml
 *.phar
+*.env
+.env

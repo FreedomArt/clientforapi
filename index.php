@@ -12,10 +12,13 @@ ini_set('display_errors', 'on');
 require __DIR__ . '/vendor/autoload.php';
 
 use ClientApi;
+use Phpfastcache\Helper\Psr16Adapter;
 
+// https://openweathermap.org/api
 $cApi = new \ClientApi\ClientApi(new \GuzzleHttp\Client(), new Psr16Adapter('Files'));
 
 var_dump($cApi);
+var_dump($cApi->login());
 
 
 

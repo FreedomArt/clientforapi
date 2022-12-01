@@ -47,4 +47,9 @@ class ClientApi
         return $instance;
     }
 
+    public function login()
+    {
+        return 'Go!';
+    }
+
 }
