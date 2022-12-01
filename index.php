@@ -13,7 +13,7 @@ require __DIR__ . '/vendor/autoload.php';
 
 use ClientApi;
 
-$cApi = new \ClientApi\ClientApi(new \GuzzleHttp\Client());
+$cApi = new \ClientApi\ClientApi(new \GuzzleHttp\Client(), new Psr16Adapter('Files'));
 
 var_dump($cApi);
 
