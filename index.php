@@ -14,11 +14,18 @@ require __DIR__ . '/vendor/autoload.php';
 use ClientApi;
 use Phpfastcache\Helper\Psr16Adapter;
 
+$url = 'https://api.openweathermap.org/data/2.5/weather?q=rostov-on-don,rus&APPID=215037b577528785f5c08b46c1d9980e&mode=json&units=metric';
+
 // https://openweathermap.org/api
 $cApi = new \ClientApi\ClientApi(new \GuzzleHttp\Client(), new Psr16Adapter('Files'));
+// or
+//$cApi = \ClientApi\ClientApi::withCredentials(new \GuzzleHttp\Client(), new Psr16Adapter('Files'));
 
-var_dump($cApi);
-var_dump($cApi->login());
+\ClientApi\ClientApi::setHttpClient(new \GuzzleHttp\Client());
+
+echo "<pre>";
+print_r($cApi->run($url, 'test'));
+echo "</pre>";
 
 
 
