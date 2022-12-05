@@ -1,4 +1,16 @@
 {
+  "name": "FreedomArt/clientforapi",
+  "description": "Api Client PHP",
+  "keywords": [
+    "client",
+    "api"
+  ],
+  "homepage": "https://github.com/raiym/instagram-php-scraper",
+  "authors": [
+    {
+      "name": "FreedomArt"
+    }
+  ],
   "optimize-autoloader": true,
   "type": "library",
   "license": "MIT",
