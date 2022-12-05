@@ -1,5 +1,7 @@
 # clientforapi
 
+composer require freedomart/clientforapi
+
 #Тестовое задание будет выглядеть следующим образом:
 
 написать клиент работы с сервисом через api
